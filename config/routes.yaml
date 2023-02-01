@@ -14,3 +14,7 @@ app_lucky_number:
 france:
     path: /france
     controller: App\Controller\FranceController::show
+
+product:
+    path: /product
+    controller: App\Controller\ProductController::detail
