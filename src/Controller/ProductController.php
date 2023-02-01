@@ -30,4 +30,30 @@ class ProductController extends AbstractController
             'product' => $product
         ]);
     }
+
+    /**
+     * @Route("/products", name="products")
+     */
+
+    public function index()
+    {
+        $products = [
+            [
+                'name' => 'product1',
+                'description' => 'This is product1',
+                'price' => 19.99,
+                'image' => 'product1.jpg'
+            ],
+            [
+                'name' => 'product2',
+                'description' => 'This is product2',
+                'price' => 29.99,
+                'image' => 'product2.jpg'
+            ],
+        ];
+
+        return $this->render('products/index.html.twig', [
+            'products' => $products
+        ]);
+    }
 }

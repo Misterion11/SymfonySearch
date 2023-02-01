@@ -18,3 +18,8 @@ france:
 product:
     path: /product
     controller: App\Controller\ProductController::detail
+
+products:
+    path: /products
+    controller: App\Controller\ProductController::index
+

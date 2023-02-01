@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center my-5">Products</h1>
+
+    <div class="d-flex flex-wrap">
+        {% for product in products %}
+            <div class="card mb-4 mr-4" style="width: 18rem;">
+                <img class="card-img-top" src="{{ product.image }}" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price: {{ product.price }}</li>
+                </ul>
+            </div>
+        {% endfor %}
+    </div>    
+
+{% endblock %}
