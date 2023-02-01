@@ -2,11 +2,12 @@
 
 namespace App\Entity;
 
-class France
+class France extends Country
 {
     private $name;
     private $currency;
     private $population;
+    private $president;
     const capital = "Paris";
 
     public function getName()
@@ -38,4 +39,19 @@ class France
     {
         $this->population = $population;
     }
+
+    public function getPresident(): ?string
+    {
+        return $this->president;
+    }
+
+    public function setPresident(string $president): self
+    {
+        $this->president = $president;
+
+        return $this;
+    }
+
+    // Propriétés et méthodes additionnelles de la classe France
+
 }
