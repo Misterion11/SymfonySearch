@@ -23,3 +23,7 @@ products:
     path: /products
     controller: App\Controller\ProductController::index
 
+search: 
+    path: /search
+    controller: App\Controller\SearchController::index
+
