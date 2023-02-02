@@ -2,11 +2,17 @@
 
 namespace App\Controller;
 
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends AbstractController
 {
+    public function __construct(private ProductRepository $productRepository)
+    {
+        
+    }
+
     /**
      * @Route("/product/{productName}", name="product_detail")
      */
@@ -37,6 +43,7 @@ class ProductController extends AbstractController
 
     public function index()
     {
+        dd($this->productRepository->getData()->getResult());
         $products = [
             [
                 'name' => 'product1',

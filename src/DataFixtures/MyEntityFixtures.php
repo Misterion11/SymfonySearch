@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Product;
+use Doctrine\Orm\Query;
 
 class MyEntityFixtures extends Fixture
 {
@@ -20,4 +21,5 @@ class MyEntityFixtures extends Fixture
 
         $manager->flush();
     }
+    
 }
